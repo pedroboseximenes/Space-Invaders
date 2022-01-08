@@ -1,8 +1,8 @@
 from PPlay.sprite import *
+from random import randint
 
-##CRIANDO MATRIZ:
+"""Criando Matriz:"""
 def monster(linha,coluna,janela):
-    global matriz_monstro
     matriz_monstro = []
     for i in range(linha):
         lin = []
@@ -11,18 +11,26 @@ def monster(linha,coluna,janela):
             if j == 0:
                 monstro.x = janela.width / 2 - (6* monstro.width)
                 monstro.y = (i + 1) * monstro.height
+                """
+                monstro.x = randint(10,janela.width)
+                monstro.y = randint(monstro.height/2,janela.height/2-100)
+                """
                 lin.append(monstro)
             else:
                 monstro.x = lin[j - 1].x + monstro.width * 3 / 3
                 monstro.y = (i + 1) * monstro.height
+                """
+                monstro.x = randint(10, janela.width)
+                monstro.y = randint(monstro.height / 2, janela.height/2 -100)
+                """
                 lin.append(monstro)
         matriz_monstro.append(lin)
     return matriz_monstro
 
 ######################################################################
 
-##MOVIMENTO DO MONSTRO:
-def movimento(velmonx, level,janela):
+"""Movimento do Monstro:"""
+def movimento(velmonx, level,janela,matriz_monstro):
     y_monster = 0
     for i in matriz_monstro:
         for j in i:
