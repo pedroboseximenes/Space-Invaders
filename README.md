@@ -1,4 +1,4 @@
-# Space-Invaders
+# # # Space-Invaders:
 # PT-BR:
   Estou desenvolvendo esse jogo com o PPlay (ferramenta da UFF) no Python.
   O jogo está na sua fase final. Já possui: Menu com 4 opções, Iniciar, Dificuldade, Ranking, Sair. No Dificuldade, possui o modo fácil, médio e difícil.
